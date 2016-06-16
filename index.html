@@ -16,6 +16,12 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <meta property="og:url"                content="http://vsp.alhasaniq.com/" />
+        <meta property="og:type"               content="product" />
+        <meta property="og:title"              content="Valve Servers Pinger" />
+        <meta property="og:description"        content="A minimal tool to test your ping on Valve's Servers; before entering the game." />
+        <meta property="og:image"              content="http://vsp.alhasaniq.com/img/App.png" />
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -64,7 +70,7 @@
 
 
             <div class="download">
-               <a href="/dist/Valve-Servers-Pinger_0.0.2.rar">
+               <a href="/dist/Valve-Servers-Pinger_0.0.2.rar" download onclick="handleOutboundLinkClicks()">
                   <div id="download" class="download-btn">
                      DOWNLOAD
                      <!-- <br> -->
@@ -100,8 +106,8 @@
 
 
 
-         <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+         <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.0.0.min.js"><\/script>')</script>
 
          <script src="js/vendor/bootstrap.min.js"></script>
 
@@ -116,6 +122,14 @@
            ga('create', 'UA-52930101-5', 'auto');
            ga('send', 'pageview');
 
+           function handleOutboundLinkClicks(event) {
+             ga('send', 'event', {
+                eventCategory: 'File',
+                eventAction: 'Download',
+                eventLabel: 'version 1',
+                transport: 'beacon'
+             });
+           }
          </script>
     </body>
 </html>

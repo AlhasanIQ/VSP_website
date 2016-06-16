@@ -185,7 +185,7 @@ footer{
 footer p{
    display: inline-block;
    position: relative;
-   top: 1vh;
+   top: 0.5vh;
    font-size: 1.2em;
 }
 footer .socials{
