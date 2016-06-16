@@ -1,4 +1,5 @@
 dist/*
+deploy.php
 
 # Windows image file caches
 Thumbs.db
